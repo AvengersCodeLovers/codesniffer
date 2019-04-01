@@ -1,0 +1,53 @@
+{
+    "name": "d1s1g4codelovers/php-codesniffer",
+    "description": "CodeSniffer helps to check coding convention.",
+    "keywords": ["d1s1g4codelovers", "codesniffer", "php-codesniffer"],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/D1S1G4CodeLovers/codesniffer",
+    "support": {
+        "issues": "https://github.com/D1S1G4CodeLovers/codesniffer/issues",
+        "source": "https://github.com/D1S1G4CodeLovers/codesniffer"
+    },
+    "authors": [
+        {
+            "name": "Nguyen Xuan Quynh",
+            "email": "nguyen.xuan.quynh@sun-asterisk.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "composer/composer": "^1.8",
+        "wataridori/framgia-php-codesniffer": "^0.3"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "phpunit/phpunit": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "D1S1G4CodeLovers\\CodeSniffer\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php vendor/bin/phpcs --config-set installed_paths src/Standards"
+        ],
+        "fix": "@php vendor/bin/php-cs-fixer fix",
+        "test": "@php vendor/bin/phpunit"
+    },
+    "scripts-descriptions": {
+        "fix": "Fix coding convention.",
+        "test": "Run the tests."
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

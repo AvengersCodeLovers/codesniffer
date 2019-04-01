@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ruleset name="D1S1G4CodeLovers">
+    <description>
+        The Coding Standard package for Code Sniffer to check whether your codes satisfy the D1S1G4CodeLovers Standards.
+    </description>
+
+    <arg name="tab-width" value="4"/>
+
+    <rule ref="SunAsterisk"/>
+</ruleset>
